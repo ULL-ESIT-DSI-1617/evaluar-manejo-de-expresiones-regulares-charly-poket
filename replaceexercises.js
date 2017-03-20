@@ -35,7 +35,7 @@ y el número. Pruebe con "h     = 4", "  temp = 5.6", "  x23= -2.3e1"
 `);
 
 var text = "h     = 4";
-var result = text.match(/(\w)[=](\W)/);
+var result = text.match(/(\w)=(\d)/);
 console.log(result);
 if (result[1] == "h"  && result[2] == "4") console.log("OK")
 else console.log("ERROR!");
