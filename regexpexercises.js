@@ -19,10 +19,11 @@ var unwritten = 0;
 
 // Fill in the regular expressions
 
-// 1.  Escriba una expresión regular que reconozca las cadenas de doble comillas. Debe permitir la presencia de comillas y caracteres escapados.
-verify(/.../,
-       ["...", "..."],
-       ["...", "..."]);
+// 1.  Escriba una expresión regular que reconozca las cadenas de doble comillas.
+//Debe permitir la presencia de comillas y caracteres escapados.
+verify(/^"(\\.|[^\\])*"$/,
+       [ '"hello \"world\" and ... "'],
+       []);
 
 // 2. Escriba una expresión regular que reconozca los números en punto flotante (por ejemplo `-2.3e-1`, `-3e2`, `23`, `3.2`). numbers = /^ ... $/, matching exacto
 verify(/^[+-]?\d+(\.\d*)?([eE][+-]?\d+)?$/,
