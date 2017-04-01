@@ -27,13 +27,13 @@ verify(/^"(\\.|[^\\])*"$/,
 
 // 2. Escriba una expresión regular que reconozca los números en punto flotante (por ejemplo `-2.3e-1`, `-3e2`, `23`, `3.2`). numbers = /^ ... $/, matching exacto
 verify(/^[+-]?\d+(\.\d*)?([eE][+-]?\d+)?$/,
-       ["...", "..."],
+       ["-2.3e-1", "3e2"],
        ["..."]);
 
 
 // 4. Escriba una expresión regular que case con los números no primos expresados en unario. Pruebe con `1111`, `111`, `111111`, `1111111`, ...
-verify(/.../,
-       ["...", "..."],
+verify(/^1(1{2})*$/,
+       ["11", "1111"],
        ["...", "..."]);
 
 // 5. Escriba una expresión regular que case con los comentarios JavaScript.

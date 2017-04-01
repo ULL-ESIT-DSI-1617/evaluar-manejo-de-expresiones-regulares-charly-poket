@@ -20,8 +20,8 @@ console.log(`
 
 
 var text = "a,b,c,1,2,d, e,f";
-var result = text.replace(/,/g, ', ');
-var result = result.replace(/\s\s/g, ' ');
+var result = text.replace(/,\s*/g, ', ');
+//var result = result.replace(/\s\s/g, ' ');
 console.log(result);
 var expected = "a, b, c, 1, 2, d, e, f";
 if (expected === result) console.log("OK")
