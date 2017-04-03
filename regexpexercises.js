@@ -37,7 +37,7 @@ verify(/^1(1{2})*$/,
        ["...", "..."]);
 
 // 5. Escriba una expresión regular que case con los comentarios JavaScript.
-verify(/.../,
+verify(/\\\\\*/,
        ["...", "..."],
        ["...", "..."]);
 
